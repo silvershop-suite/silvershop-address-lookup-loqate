@@ -1,6 +1,6 @@
-# silvershop/address-lookup-loqate
+# silvershop-suite/address-lookup-loqate
 
-A **satellite provider** for [`silvershop/address-lookup`](https://github.com/silvershop/silvershop-address-lookup)
+A **satellite provider** for [`silvershop-suite/address-lookup`](https://github.com/silvershop/silvershop-address-lookup)
 (CMS 6) that resolves addresses through **[Loqate (GBG) Capture](https://www.loqate.com/developers/api/capture/)** —
 the **global fallback** for the suite.
 
@@ -33,7 +33,7 @@ code and lets a genuine miss fall back to the manual form.
 ## Installation
 
 ```bash
-composer require silvershop/address-lookup-loqate
+composer require silvershop-suite/address-lookup-loqate
 ```
 
 Then run `dev/build?flush=all`.
@@ -92,7 +92,7 @@ SilverShop\AddressLookup\Loqate\LoqateProvider:
 **Loqate is consent-gated** — the key difference from the bundled providers and the MyParcel satellite. Those are
 functional/necessary (EU government / own-logistics processors), but Loqate is a **global third-party processor
 (GBG)** whose fallback routing may leave the EU, so the provider declares a consent category (default **`marketing`**)
-and only runs once [`silvershop/cookieconsent`](https://github.com/silvershop) confirms that category is granted:
+and only runs once [`silvershop-suite/cookieconsent`](https://github.com/silvershop) confirms that category is granted:
 
 - **cookieconsent installed** → the lookup runs only after the shopper grants the category (fail-closed before a
   decision).
@@ -125,7 +125,7 @@ The lookup endpoint itself (POST-only, same-origin + CSRF, rate-limited) lives i
 - PHP ^8.3
 - silverstripe/framework ^6
 - silvershop/core ^6
-- silvershop/address-lookup ^1
+- silvershop-suite/address-lookup ^1
 - A Loqate API key (`SS_LOQATE_API_KEY`)
 
 ## License

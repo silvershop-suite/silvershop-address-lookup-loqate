@@ -1,6 +1,6 @@
 {
-    "name": "silvershop/address-lookup-loqate",
-    "description": "Loqate (GBG) Capture provider for silvershop/address-lookup (CMS 6): the GLOBAL satellite connector. Resolves addresses in 250+ countries via Loqate's two-step Find -> Retrieve autocomplete, and installs itself as the registry's global `default` so every country without a regional mapping (NZ, US, rest-of-world) autofills through Loqate. Consent-gated (third-party global processor) and paid per lookup; reads SS_LOQATE_API_KEY.",
+    "name": "silvershop-suite/address-lookup-loqate",
+    "description": "Loqate (GBG) Capture provider for silvershop-suite/address-lookup (CMS 6): the GLOBAL satellite connector. Resolves addresses in 250+ countries via Loqate's two-step Find -> Retrieve autocomplete, and installs itself as the registry's global `default` so every country without a regional mapping (NZ, US, rest-of-world) autofills through Loqate. Consent-gated (third-party global processor) and paid per lookup; reads SS_LOQATE_API_KEY.",
     "type": "silverstripe-vendormodule",
     "license": "BSD-3-Clause",
     "keywords": ["silverstripe", "silvershop", "address", "autocomplete", "postcode", "checkout", "loqate", "gbg", "addressy", "global", "validation"],
@@ -13,7 +13,7 @@
         "php": "^8.3",
         "silverstripe/framework": "^6.0",
         "silvershop/core": "^6",
-        "silvershop/address-lookup": "^1"
+        "silvershop-suite/address-lookup": "^1"
     },
     "require-dev": {
         "cambis/silverstan": "^2.1",
@@ -22,7 +22,7 @@
         "squizlabs/php_codesniffer": "^3.0"
     },
     "suggest": {
-        "silvershop/cookieconsent": "Gates the Loqate lookup behind a consent category (default `marketing`); without it, the global fallback is default-deny until consent is assumed in config."
+        "silvershop-suite/cookieconsent": "Gates the Loqate lookup behind a consent category (default `marketing`); without it, the global fallback is default-deny until consent is assumed in config."
     },
     "scripts": {
         "test": "vendor/bin/phpunit",

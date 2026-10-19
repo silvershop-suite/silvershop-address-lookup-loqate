@@ -1,0 +1,13 @@
+---
+Name: silvershop-address-lookup-loqate
+After:
+  - '#silvershop-address-lookup'
+---
+SilverShop\AddressLookup\Provider\AddressLookupProviderRegistry:
+  # Register the paid Loqate provider alongside the base's free providers (and any other installed satellites).
+  providers:
+    loqate: '%$SilverShop\AddressLookup\Loqate\LoqateProvider'
+  # GLOBAL FALLBACK: become the registry `default`, so every country WITHOUT a `by_country` entry (NZ, US, and the
+  # rest of the world) resolves through Loqate. `After: #silvershop-address-lookup` makes this win over the base's
+  # `default: ~`. The base's regional mappings (NL→pdok, DE→openplz, BE→myparcel) are deliberately NOT touched.
+  default: loqate

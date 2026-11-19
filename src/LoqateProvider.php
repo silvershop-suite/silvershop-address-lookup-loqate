@@ -37,7 +37,7 @@ use SilverStripe\Core\Environment;
  * **Consent: GATED.** Unlike the functional/necessary bundled providers and the own-logistics MyParcel satellite,
  * Loqate is a global third-party processor (GBG) that may route outside the EU, so it declares a consent category
  * (default `marketing`, overridable in config) and only runs once the base module's ConsentResolver confirms that
- * category is granted — i.e. gated via silvershop/cookieconsent when installed, default-deny otherwise.
+ * category is granted — i.e. gated via silvershop-suite/cookieconsent when installed, default-deny otherwise.
  *
  * Inherits the base's hardened Guzzle client (SSL verify ON, short timeout, graceful empty on any fault) and the
  * `http_options` / constructor MockHandler test seam; because Loqate authenticates by query param, no header override

@@ -1,6 +1,6 @@
 # silvershop-suite/address-lookup-loqate
 
-A **satellite provider** for [`silvershop-suite/address-lookup`](https://github.com/silvershop/silvershop-address-lookup)
+A **satellite provider** for [`silvershop-suite/address-lookup`](https://github.com/silvershop-suite/silvershop-address-lookup)
 (CMS 6) that resolves addresses through **[Loqate (GBG) Capture](https://www.loqate.com/developers/api/capture/)** —
 the **global fallback** for the suite.
 
